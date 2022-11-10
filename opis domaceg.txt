@@ -1,0 +1,15 @@
+Domaci zadatak omogucava rad sa filmovima salama i prikazima filmova.
+Omogucene su CRUD operacije za rad sa filmovima i kreiranje, brisanje i pretraga repertoara.
+Prilikom kreiranja prikaza filma, vodi se racuna o tome da je u datom periodu data sala slobodna.
+Server se sastoji iz sledecih slojeva:
+	- broker - sluzi za konektovanje na bazu i izvrsavanje upita
+	- servisi (1 servis za svaku tabelu) - implementiraju poslovnu logiku za svaku tabelu. Pozivaju broker
+	- kontroler- vrsi rutiranje tj. za odgovarajucu akciju koju klijent posalje putem URL - a,
+		     izvrsava odgovarajucu metodu odgovarajuce servis klase
+		     i prosledjuje joj parametre. Kontroler takodje instancira objekte
+		     servis klasa i brokera.
+	- index.php - ulazna tacka. Kreira kontrolera i izvrsava njegovu metodu
+		      za obradu zahteva.
+Aplikacija se sastoji iz 3 stranice (filmovi, prikazi i posebna stranica za pretragu).
+Svaki zahtev ka serveru implementiran je putem AJAX - a.
+

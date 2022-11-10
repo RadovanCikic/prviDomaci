@@ -53,5 +53,3 @@ class PrikazServis{
         $this->broker->upisi("delete from prikaz where id=".$id);
     }
 }
-
-?>
